@@ -60,7 +60,14 @@ if selecao == 4:
 if selecao == 5:
     PaisA = 80000  # crecimento de 3% ao ano
     PaisB = 200000  # crescimento 1,5% ao ano
-    for c in range(0, PaisA * 0.03 >= PaisB * 0.015, 1):
-        print(c)
+    CresA = 0.03
+    CresB = 0.015
+    Anos = 0
+
+    while (PaisA<PaisB):
+        Anos += 1
+        PaisA = PaisA+(PaisA * CresA)
+        PaisB = PaisB+(PaisB * CresB)
+    print(Anos)
 print(" ---------------------------------------------------------------------------------")
 print("Obrigado")
