@@ -56,11 +56,37 @@ if selecao == 4:
     Texto = input("Digite um texto:")
     print("O tamanho do texto eh:")
     print(len(Texto))
+    print("Fim do exercicio 04")
 # Exercicio 05
 if selecao == 5:
     PaisA = 80000  # crecimento de 3% ao ano
     PaisB = 200000  # crescimento 1,5% ao ano
-    for c in range(0, PaisA * 0.03 >= PaisB * 0.015, 1):
-        print(c)
+    TaxaA = 0.03
+    TaxaB = 0.015
+    Anos = 0
+
+    while (PaisA<PaisB):
+        Anos += 1
+        PaisA = PaisA+(PaisA * TaxaA)
+        PaisB = PaisB+(PaisB * TaxaB)
+    print(Anos)
+    print("Fim do exercicio 05")
+
+#Exercicio 06
+if selecao ==6:
+
+  PaisA = int(input("Informe o numero de habitantes do Pais A ou insira [-1] para sair:"))
+  while PaisA != -1:
+    PaisB = int(input("Informe o numero de habitantes do Pais B"))
+    TaxaA = float(input("Informe a taxa de crescimento anual do Pais A"))
+    TaxaB = float(input("Informe a taxa de crescimento anual do Pais B"))
+    Anos = 0
+
+    while (PaisA<PaisB):
+        Anos += 1
+        PaisA = PaisA+(PaisA * TaxaA)
+        PaisB = PaisB+(PaisB * TaxaB)
+    print(Anos)
+    print("Fim do exercicio 06")
 print(" ---------------------------------------------------------------------------------")
 print("Obrigado")
