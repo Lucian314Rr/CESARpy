@@ -82,7 +82,7 @@ if selecao ==6:
     TaxaB = float(input("Informe a taxa de crescimento anual do Pais B"))
     Anos = 0
 
-    while (PaisA<PaisB):
+    while PaisA<PaisB:
         Anos += 1
         PaisA = PaisA+(PaisA * TaxaA)
         PaisB = PaisB+(PaisB * TaxaB)
